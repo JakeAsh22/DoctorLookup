@@ -10,17 +10,8 @@ $(document).ready(function()
   {
     let name = "Varley";
     let doctor = new Doctor();
-    (async () =>
-    {
-      console.log("hi");
-      const response = await doctor.getDocName();
-      let docName = getElements(response);
-      console.log(docName);
-      console.log("hello")
-    })();
-    const getElements = function (response)
-    {
-      console.log(doctor.profile.last_name[0]);
-    }
+    let request = new XMLHttpRequest();
+    const url = `https://api.betterdoctor.com/2016-03-01/doctors?last_name=${name}&location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=99c49e507ab58e761efd1622ee667e9f`
+    };
   });
 });
