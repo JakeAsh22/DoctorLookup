@@ -8,17 +8,19 @@ $(document).ready(function()
 {
   $("#doctType").click(function()
   {
-    let name = "Seattle Childrens";
+    let name = "Varley";
     let doctor = new Doctor();
     (async () =>
     {
+      console.log("hi");
       const response = await doctor.getDocName();
       let docName = getElements(response);
       console.log(docName);
+      console.log("hello")
     })();
     const getElements = function (response)
     {
-      return response[name];
+      console.log(doctor.profile.last_name[0]);
     }
   });
 });
