@@ -15,9 +15,9 @@ To set up and install this website, download the master branch off Github, and t
 ## Specs
 
 * 1: User should be able to find a doctor for what they need: ie cancer, common illness, etc.
-* 2: Search doctors by name
-* 3: show the doctors info on the page
-* 4: make sure errors are returned correctly
+* 2: User should be able to search for Doctors by their last name
+* 3: show the doctors info on the page in a readable fashion
+* 4: make sure errors are returned correctly to the user
 * 5: Add user functionality
 * 6: if no doctors fit the description, let user know
 * 7: also provide information if that the user may have misspelled their info

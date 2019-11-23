@@ -8,6 +8,8 @@ $(document).ready(function()
 {
   $("#doctType").click(function()
   {
+    $(".doctorCard").hide();
+    $(".doctorCard").show();
     //let name = "Varley";
     //let doctor = new Doctor();
     let request = new XMLHttpRequest();
