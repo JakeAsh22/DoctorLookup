@@ -8,7 +8,7 @@ $(document).ready(function()
 {
   $("#doctType").click(function()
   {
-    let name = "Varley";
+    //let name = "Varley";
     //let doctor = new Doctor();
     let request = new XMLHttpRequest();
     const url = `https://api.betterdoctor.com/2016-03-01/doctors?last_name=Varley&location=wa-seattle&skip=0&limit=10&user_key=99c49e507ab58e761efd1622ee667e9f`;
@@ -17,7 +17,7 @@ $(document).ready(function()
     {
       if (this.readyState ===4 && this.status ===200) {
         let response = JSON.parse(this.responseText);
-        console.log(response);
+        console.log("hello");
         getElements(response);
       }
 
@@ -25,7 +25,6 @@ $(document).ready(function()
 
     request.open("GET",url,true);
     request.send();
-
     const getElements = function(response)
     {
       $(".docstuff").text(`${response.main}`);
