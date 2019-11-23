@@ -9,14 +9,24 @@
       <div class="jumbotron">
         <h1>Seattle Doctor Search</h1>
       </div>
-      <form>
-        <label for="sickness">Please say what you have: </label>
+      <form id="doctType">
+        <label for="sickness">Please state issue: </label><br>
         <input type="text" id="sickness">
-        <button type="button" id="doctType">Submit</button>
+        <button type="button" name="button" class="btn btn-success">Submit</button>
+        <img src="https://carlisletheacarlisletheatre.org/images/doctor-logo-green-5.jpg" alt=""> <br>
       </form>
-    </div>
-    <div class="docstuff">
+      <p>Or:</p>
+      <form id="doctorFind">
+        <label for="docFind">Please enter Doctors last name: </label><br>
+        <input type="text" id="docFind">
+        <button type="button" name="button" class="btn btn-success">Submit</button>
+      </form>
 
+
+    <div class="card doctorCard">
+      <h3>Doctor information: </h3>
+      <div class="docstuff"></div>
     </div>
+   </div>
   </body>
 </html>
