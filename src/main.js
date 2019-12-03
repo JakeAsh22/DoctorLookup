@@ -13,13 +13,13 @@ $(document).ready(function()
     //let name = "Varley";
     //let doctor = new Doctor();
     let request = new XMLHttpRequest();
-    const url = `https://api.betterdoctor.com/2016-03-01/doctors?last_name=Varley&location=wa-seattle&skip=0&limit=10&user_key=99c49e507ab58e761efd1622ee667e9f`;
+    const url = `https://api.betterdoctor.com/2016-03-01/doctors?location=wa-seattle&skip=0&limit=10&user_key=${process.env.API_KEY}`;
 
     request.onreadystatechange = function()
     {
-      if (this.readyState ===4 && this.status ===200) {
-        let response = JSON.parse(this.responseText);
-        console.log("hello");
+      if (this.readyState === 4 && this.status === 200) {
+        const response = JSON.parse(this.responseText);
+        //console.log("hello");
         getElements(response);
       }
 
@@ -29,7 +29,7 @@ $(document).ready(function()
     request.send();
     const getElements = function(response)
     {
-      $(".docstuff").text(`${response.main}`);
+      $(".docstuff").text(`${response.practices}`);
     };
   });
 });
